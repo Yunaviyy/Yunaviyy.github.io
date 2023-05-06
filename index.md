@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess the Movie</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #image {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guess the Movie</h1>
+  <div id="container">
+    <img id="image" src="https://prod-images.tcm.com/Master-Profile-Images/theshawshankredemption1994.20338.2.jpg">
+    <form id="form">
+      <label>Enter your guess:</label>
+      <input type="text" id="guessInput">
+      <input type="submit" value="Submit" id="submitGuess">
+    </form>
+    <div id="result"></div>
+  </div>
+  <script>
+    var movies = [
+      {name: "The Shawshank Redemption", image: "https://prod-images.tcm.com/Master-Profile-Images/theshawshankredemption1994.20338.2.jpg"},
+      {name: "The Godfather", image: "https://th.bing.com/th/id/OIP.EusS_Bg0022rAuntpCerRQHaHY?pid=ImgDet&rs=1"},
+      {name: "The Dark Knight", image: "https://th.bing.com/th/id/R.34df6b287faf65b160b47e05ba85bb3b?rik=tzCXfKycVwXwvg&pid=ImgRaw&r=0"}
+    ];
+
+    var index = 0;
+
+    var image = document.getElementById("image");
+    var guessForm = document.getElementById("form");
+    var guessInput = document.getElementById("guessInput");
+    var resultDiv = document.getElementById("result");
+
+    guessForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var guess = guessInput.value.toLowerCase().trim();
+
+      if (guess === movies[index].name.toLowerCase()) {
+        resultDiv.textContent = "Correct!";
+        index++;
+        if (index >= movies.length) {
+          guessForm.remove();
+          resultDiv.textContent = "Congratulations! You guessed all movies correctly!";
+        } else {
+          image.src = movies[index].image;
+          guessInput.value = "";
+        }
+      } else {
+        resultDiv.textContent = "Incorrect. Try again.";
+      }
+    });
+  </script>
+</body>
+</html>
