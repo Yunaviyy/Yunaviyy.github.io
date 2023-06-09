@@ -1,61 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Guess the Movie</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    #image {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>是悦悦呐~ LITERATURE CRYSTAL</title>
+  <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css"> -->
+  <!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" > -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="my web and me.css">
+  <script src="my web and me.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+  <input type="hidden" id="_w_simile" data-inspect-config="3">
+  <script type="text/javascript" src="chrome-extension://odphnbhiddhdpoccbialllejaajemdio/scripts/inspector.js"></script>
+  <style class="mpa-style-fix ImageGatherer">.FotorFrame{position:fixed!important}</style>
+  <style class="mpa-style-fix SideFunctionPanel">.weui-desktop-online-faq__wrp{top:304px!important;bottom:unset!important}.weui-desktop-online-faq__wrp .weui-desktop-online-faq__switch{width:38px!important}</style>
 </head>
 <body>
-  <h1>Guess the Movie</h1>
-  <div id="container">
-    <img id="image" src="https://prod-images.tcm.com/Master-Profile-Images/theshawshankredemption1994.20338.2.jpg">
-    <form id="form">
-      <label>Enter your guess:</label>
-      <input type="text" id="guessInput">
-      <input type="submit" value="Submit" id="submitGuess">
-    </form>
-    <div id="result"></div>
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="bar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/touxiang.jpg" alt="LITERATURE CRYSTAL" width="70" height="70">
+      是悦悦呐~ LITERATURE CRYSTAL
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="active">
+          <a class="nav-link" aria-current="page" href="index.html">主页</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " aria-current="page" href="myweb_zuopin.html">作品</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="myweb_photos.html">相册</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="myweb_love.html">爱好</a>
+        </li>
+      </ul>
+    </div>
   </div>
-  <script>
-    var movies = [
-      {name: "The Shawshank Redemption", image: "https://prod-images.tcm.com/Master-Profile-Images/theshawshankredemption1994.20338.2.jpg"},
-      {name: "The Godfather", image: "https://th.bing.com/th/id/OIP.EusS_Bg0022rAuntpCerRQHaHY?pid=ImgDet&rs=1"},
-      {name: "The Dark Knight", image: "https://th.bing.com/th/id/R.34df6b287faf65b160b47e05ba85bb3b?rik=tzCXfKycVwXwvg&pid=ImgRaw&r=0"}
-    ];
+</nav>
 
-    var index = 0;
+<div id="carouselExampleInterval" class="carousel slide pointer-event" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="img/book.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style="color:#F5EBCF;font-family:SimSun ;">我心里一直在暗暗设想，天堂应该是图书馆的模样 | “I have always imagined that Paradise will be a kind of library.”</h5>
+            <p>—— 博尔赫斯《关于天赐的诗》</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/work.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style="color:#F5EBCF;font-family:SimSun">迷失的人迷失了，相逢的人会再相逢 | “见失う人は见失って、めぐり会う人は更にめぐり会うことができ(ありえ)ます。”</h5>
+            <p>—— 村上春树《挪威的森林》</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/tu.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style="color:#F5EBCF;">“请用一支玫瑰纪念我 | Por favor recuerda mi memoria con una rosa. ”</h5>
+            <p>——马尔克斯《百年孤独》</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-    var image = document.getElementById("image");
-    var guessForm = document.getElementById("form");
-    var guessInput = document.getElementById("guessInput");
-    var resultDiv = document.getElementById("result");
 
-    guessForm.addEventListener("submit", function(event) {
-      event.preventDefault();
 
-      var guess = guessInput.value.toLowerCase().trim();
+<!-- Studio Details Jumbotron-->
+<div class="studio container-fluid reveal">
+	<div class="studioDetails row m-5 p-5">
+		<div class="col-lg-6">
+			<h2 style="font-family:FangSong; font-weight:bolder;">关于自己</h2>
+      <hr class="line">
+			<p>现就读于中国传媒大学公共关系学系，爱好就是热爱一切值得热爱的。喜欢文学、大海和相逢，但没有胜过自己。
+        梦想是看完中国沿海海岸线，到贡嘎玩上一圈。
+        喜欢自由，但却需要规矩。
+        追求效率，痛恨内卷。
+        最爱的人是妈妈~
+        最喜欢的一句话是 “相逢的人会再相逢”</p>
+			<br>
+			<a href="#" class="btn btn-primary">了解更多</a>
+		</div>
+		<div class="col-lg-6">
+			<img src="img/self.jpg" class="img-fluid">
+		</div>
+	</div>
+</div>
 
-      if (guess === movies[index].name.toLowerCase()) {
-        resultDiv.textContent = "Correct!";
-        index++;
-        if (index >= movies.length) {
-          guessForm.remove();
-          resultDiv.textContent = "Congratulations! You guessed all movies correctly!";
-        } else {
-          image.src = movies[index].image;
-          guessInput.value = "";
-        }
-      } else {
-        resultDiv.textContent = "Incorrect. Try again.";
-      }
-    });
-  </script>
+<!-- Representative Director Details -->
+<div class="repreDetails container reveal" style="padding-top:22rem">
+  <div class="rounded text-center">
+    <h1 class="display-6" style="margin-top:10rem ;font-family:FangSong; font-weight:bolder;">最喜爱的作家</h1>
+    <center><hr class="line"></center>
+  </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-4 d-block">
+            <div class="wrapper zoom">
+                <div class="profile" id="profile1">
+                    <div class="overlay">
+                        <div class="about d-flex flex-column">
+                            <h2>村上春树</h2>
+                            <span class="p-3">著作《1Q84》、《挪威的森林》、《海边的卡夫卡》、《寻羊冒险记》、《且听风吟》等
+                                在两个根本不通的世界当中翻译：平淡与奇异、自然与超自然、乡村与城市、男与女、地上与地下。</span>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 d-block">
+            <div class="wrapper zoom">
+                <div class="profile" id="profile2">
+                    <div class="overlay">
+                        <div class="about d-flex flex-column">
+                            <h2>马尔克斯</h2>
+                            <span class="p-3">著作《百年孤独》、《霍乱时期的爱情》、《一场事先张扬的凶杀案》等。
+                                以丰富的想象编织了一个现实与幻想交相辉映的世界，反映了一个大陆的生命与矛盾。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 d-block">
+            <div class="wrapper zoom">
+                <div class="profile" id="profile3">
+                    <div class="overlay">
+                        <div class="about d-flex flex-column">
+                            <h2>莫言</h2>
+                            <span class="p-3">著作《蛙》、《红高粱》、《丰乳肥臀》、《酒国》等。
+                                村落的经验是如何给人充沛的生命力，最泥土的人就最国际。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Buildings Details Jumbotron -->
+<div class="container-fluid reveal">
+  <div class="mt-5 pt-5 rounded text-center">
+    <h1 class="display-6" style="font-family:FangSong; font-weight:bolder;">足迹 | 成长在北中南</h1>
+    <center><hr class="line"></center>
+	<div class="row pt-5">
+		<div class="col-xs-12 col-sm-6 col-md-4">
+      <p><img src="img/zj.jpg" alt="Avatar" style="width:200px" class="building"></p>
+			<h3>长在浙江</h3>
+			<p>在浙江生活十四余年，在宁波长大，仙居绍兴，见过没有沙滩的大海，坐过行驶在汹涌海浪上的轮渡，感受着当地的风土人情，但很可惜，没学会吴语，没爱上霉菜。</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<p><img src="img/ah.jpg" alt="Avatar" style="width:200px" class="building"></p>
+			<h3>渡在安徽</h3>
+			<p>回乡求学六年，体验过陌生城市里只认识妈妈一个人的感觉，钦佩过曾经能为学习付出那么多的自己，认识了几个能讲一辈子话的好友。</p>
+		</div>
+		<div class="col-sm-12 col-md-4">
+			<p><img src="img/bj.jpg" alt="Avatar" style="width:200px" class="building"></p>
+			<h3>学在北京</h3>
+			<p>待得最短，体验最多。不想留在北京，但想让北京留住我，有最开心的日子，也有最伤心的日子。是交织，是缠绕，是坚持。</p>
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-4" style="padding-left:3rem;">
+        <h5>
+            <img src="img/touxiang.jpg" width="50px" height="50px">
+          <strong>是悦悦呐~</strong>
+        </h5>
+        <h6 class="pt-3">
+          <a href="index.html">主页</a> |
+          <a href="myweb_zuopin.html">作品</a> |
+          <a href="myweb_photos.html">相册</a> |
+          <a href="myweb_love.html">爱好</a>
+        </h6>
+        <h6 style="color:#c9c2a79b ;">Tomorrow is another day!</h6><br>
+      </div>
+      <div class="col-md-4 pt-3 pb-3" style="padding-left:3rem;">
+        <h6 style="padding-bottom:1rem"><i class="bi bi-geo-alt-fill"><span style="padding-left: 1rem;">定福庄东街一号：中国传媒大学</span></i></h6>
+        <h6 style="padding-bottom:1rem"><i class="bi bi-telephone-fill"></i><span style="padding-left: 1rem;">wx:q1537225082</span></h6>
+        <h6 style="padding-bottom:1rem"><i class="bi bi-envelope-fill"><span style="padding-left: 1rem;">viyyhmm@cuc.edu.cn</span></i></h6>
+
+      </div>
+      <div class="col-md-4 pt-3 pb-4" style="padding-left:3rem;padding-right:3rem;">
+        <h5>关键词</h5>
+        <h6 style="color:#c9c2a79b ;padding-bottom: 1rem;font-family:SimSun">效率、工作、美食、文学、电影。</h6>
+
+    </div>
+  </div>
+</div></footer>
+
+
 </body>
 </html>
